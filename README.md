@@ -32,3 +32,8 @@ Upload via st-link:
 ```bash
 meson compile -C build/release flash
 ```
+# Debugging
+Run openocd in the root directory of the project and then run debugger
+```bash
+arm-none-eabi-gdb -q -x openocd.gdb
+```
