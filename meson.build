@@ -1,5 +1,5 @@
 project(
-    'stm32-cpp-libopencm3-freertos-meson', 'c', 'cpp',
+    'bl-clock', 'c', 'cpp',
     version : '1.0',
     default_options : [
       'c_std=c2x',
@@ -27,6 +27,10 @@ ldflags = [
 
 sources = [
     'src/main.cxx',
+    'src/gpio.cxx',
+    'src/uart.cxx',
+    'src/i2c.cxx',
+    'src/ring_buffer.cxx',
 ]
 
 incdir = [
