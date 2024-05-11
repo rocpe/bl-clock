@@ -10,31 +10,29 @@ project(
 
 cflags = [
     '-mcpu=cortex-m3',
-    '-DSTM32F1'
+    '-DSTM32F1',
 ]
 
 cppflags = [
     '-mcpu=cortex-m3',
-    '-DSTM32F1'
+    '-DSTM32F1',
 ]
 
 ldflags = [
     '-T../../stm32f103x8.ld',
     '--specs=nosys.specs',
     '-nostartfiles',
-    '-Wl,--gc-sections'
+    '-Wl,--gc-sections',
 ]
 
 sources = [
-    'src/main.cxx',
-    'src/gpio.cxx',
-    'src/uart.cxx',
-    'src/i2c.cxx',
-    'src/ring_buffer.cxx',
+    'core/src/common.cxx',
+    'core/src/PwmOut.cxx',
+    'core/src/main.cxx',
 ]
 
 incdir = [
-  'inc'
+  'core/inc'
 ]
 
 cc = meson.get_compiler('c')

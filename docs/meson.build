@@ -4,7 +4,7 @@ cdata = configuration_data()
 # set parameters for cdata object
 cdata.set('PROJECT_NAME', meson.project_name())
 cdata.set('VERSION', meson.project_version())
-cdata.set('SOURCE_DIR', join_paths(meson.project_source_root(),'src'))
+cdata.set('SOURCE_DIR', meson.project_source_root()+'/core')
 cdata.set('OUTPUT_DIR', join_paths(meson.project_build_root(),'docs'))
 cdata.set('README_PATH', join_paths(meson.project_source_root(),'README.md'))
 
